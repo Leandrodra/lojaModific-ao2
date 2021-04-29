@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: cursive;
+    background-image:url('shoo.jpg');
+    background-position:center ;
+}
+
+.title {
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+}
+
+header {
+    background-color: #696969;
+    height: 30vh;
+    border-radius: 0 0 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.card {
+    width: 500px;
+    max-width: 100%;
+    background-color: white;
+    box-shadow: 0 0 3px 0 #222;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    border-radius: 20px;
+    padding: 5px 10px;
+    border: 1px solid #555;
+    margin-right: 10px;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button img {
+    width: 22px;
+    height: 22px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.auth-container {
+  width: 400px;
+  min-height: 400px;
+  background-color: #ecf0f1;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 0 0 3px 0 #222;
+  color: #777;
+}
+
+.auth-container form {
+  max-width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.auth-container input {
+  margin: 0;
+}
+
+.btn {
+  border: none;
+  background-color: white;
+  padding: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn:hover {
+  box-shadow: 0 0 3px 0 #222;
+}
+
+.bg-blue {
+  background-color: #696969;
+  color: white;
+}
+
+.text-blue {
+  color: #3498db;
+}

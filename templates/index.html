@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Inicial</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <span class="title">Todo List</span>
+    <form action="/create" method="POST">
+      <input  name="title" placeholder="O que fazer?">
+      <button type="submit">
+        <img src="{{ url_for('static', filename='plus.png') }}">
+      </button>
+    </form>
+  </header>
+
+  <ul class="content">
+    {% for todo in todos %}
+      <li class="card">
+        <form action="/update/{{ todo.id }}" method="POST">
+          <input name="title" value="{{ todo.title }}">
+          <button type="submit">✏️</button>
+        </form>
+
+        <div class="actions">
+          <a href="/delete/{{ todo.id }}">❌</a>
+          {% if todo.complete == False%}
+              <a href="/complete/{{ todo.id }}">✅</a>
+          {% endif %}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
